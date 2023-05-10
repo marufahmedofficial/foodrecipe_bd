@@ -1,8 +1,9 @@
-import 'package:foodrecipe/data.dart';
-import 'package:foodrecipe/global/functions.dart';
-import 'package:foodrecipe/screen/details/detail.dart';
-import 'package:foodrecipe/widget/custom_grid_tile.dart';
 import 'package:flutter/material.dart';
+
+import '../../global/functions.dart';
+import '../../utils/data.dart';
+import '../../widget/custom_grid_tile.dart';
+import '../details/detail.dart';
 
 class Rice extends StatelessWidget {
   final List rice = bdfood["rice"];
@@ -14,7 +15,7 @@ class Rice extends StatelessWidget {
     return GridView.builder(
       gridDelegate: customGridDelegate(), 
       itemCount: rice.length,
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       itemBuilder: (BuildContext context, int index){
         return CustomGridTile(
           onTap: (){
