@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.techrz.it.foodrecipe_bd">
    <application
-        android:label="foodrecipe_bd"
+        android:label="Food Recipe BD"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
