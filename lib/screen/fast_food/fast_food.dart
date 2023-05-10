@@ -1,8 +1,8 @@
-import 'package:foodrecipe/data.dart';
-import 'package:foodrecipe/global/functions.dart';
-import 'package:foodrecipe/screen/details/detail.dart';
-import 'package:foodrecipe/widget/custom_grid_tile.dart';
 import 'package:flutter/material.dart';
+import '../../global/functions.dart';
+import '../../utils/data.dart';
+import '../../widget/custom_grid_tile.dart';
+import '../details/detail.dart';
 
 class FastFood extends StatelessWidget {
    final List fastFood = bdfood["fast_food"];

@@ -1,10 +1,10 @@
 import 'dart:math';
-import 'package:foodrecipe/db/db_helper.dart';
-import 'package:foodrecipe/model/recipe_model.dart';
-import 'package:foodrecipe/screen/video/video.dart';
-import 'package:foodrecipe/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
+import '../../db/db_helper.dart';
+import '../../model/recipe_model.dart';
+import '../../widget/custom_button.dart';
+import '../video/video.dart';
 
 // ignore: must_be_immutable
 class DetailScreen extends StatelessWidget {
