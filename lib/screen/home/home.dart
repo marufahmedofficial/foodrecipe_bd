@@ -1,15 +1,15 @@
-import 'package:foodrecipe/constant/constant.dart';
-import 'package:foodrecipe/global/functions.dart';
-import 'package:foodrecipe/screen/about_us/about_us.dart';
-import 'package:foodrecipe/screen/bread/bread.dart';
-import 'package:foodrecipe/screen/cooked.dart';
-import 'package:foodrecipe/screen/desert/desert.dart';
-import 'package:foodrecipe/screen/fast_food/fast_food.dart';
-import 'package:foodrecipe/screen/favorite.dart';
-import 'package:foodrecipe/screen/non_veg/non_veg.dart';
-import 'package:foodrecipe/screen/rice/rice.dart';
-import 'package:foodrecipe/screen/tips/tips.dart';
 import 'package:flutter/material.dart';
+import '../../constant/constant.dart';
+import '../../global/functions.dart';
+import '../about_us/about_us.dart';
+import '../bread/bread.dart';
+import '../cooked.dart';
+import '../desert/desert.dart';
+import '../fast_food/fast_food.dart';
+import '../favorite.dart';
+import '../non_veg/non_veg.dart';
+import '../rice/rice.dart';
+import '../tips/tips.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String path = "HomeScreen";
@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.pushNamed(context, Favorite.path);
               },
-              icon: Icon(Icons.favorite),
+              icon: const Icon(Icons.favorite),
             )
           ],
         ),
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.pushNamed(context, Favorite.path);
                   },
-                  title: Text(
+                  title: const Text(
                     "Favorite",
                     style: TextStyle(
                         color: Colors.white,
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 18),
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 0.5,
                   color: Colors.white,
                   height: 0,
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.pushNamed(context, Cooked.path);
                   },
-                  title: Text(
+                  title: const Text(
                     "Cooked",
                     style: TextStyle(
                         color: Colors.white,
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 18),
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 0.5,
                   color: Colors.white,
                   height: 0,
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.pushNamed(context, CookingTips.path);
                   },
-                  title: Text(
+                  title: const Text(
                     "Tips",
                     style: TextStyle(
                         color: Colors.white,
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: double.infinity,
                   height: 60,
                   padding: const EdgeInsets.all(15.0),
-                  child: Text(
+                  child: const Text(
                     "More",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
@@ -110,11 +110,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     launchURL(appLink);
                   },
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.rate_review,
                     color: Colors.white,
                   ),
-                  title: Text(
+                  title: const Text(
                     "Rate Us",
                     style: TextStyle(
                         color: Colors.white,
@@ -126,11 +126,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     launchURL(appLink);
                   },
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.update,
                     color: Colors.white,
                   ),
-                  title: Text(
+                  title: const Text(
                     "Update",
                     style: TextStyle(
                         color: Colors.white,
@@ -142,11 +142,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.pushNamed(context, AboutUs.path);
                   },
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.person,
                     color: Colors.white,
                   ),
-                  title: Text(
+                  title: const Text(
                     "About us",
                     style: TextStyle(
                         color: Colors.white,
@@ -160,17 +160,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TabBar(
                   isScrollable: true,
-                  labelPadding: EdgeInsets.symmetric(horizontal: 10),
+                  labelPadding: const EdgeInsets.symmetric(horizontal: 10),
                   indicatorWeight: 1.0,
                   indicatorColor: Colors.orange,
-                  labelStyle: TextStyle(
+                  labelStyle: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                       fontFamily: "Gilroy"),
@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   indicator: BoxDecoration(
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(4.0)),
-                  tabs: [
+                  tabs: const [
                     Tab(
                         child: Text(
                       "Rice",
