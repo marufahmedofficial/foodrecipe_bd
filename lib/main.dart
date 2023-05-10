@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'screen/about_us/about_us.dart';
+import 'screen/cooked.dart';
+import 'screen/details/detail.dart';
+import 'screen/favorite.dart';
+import 'screen/home/home.dart';
+import 'screen/tips/tips.dart';
+import 'screen/video/video.dart';
 
 
 void main() {
@@ -14,15 +21,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // initialRoute: HomeScreen.path,
+      initialRoute: HomeScreen.path,
       routes: {
-        // HomeScreen.path: (ctx) => HomeScreen(),
-        // DetailScreen.path: (ctx) => DetailScreen(),
-        // YoutubeScreen.path: (ctx) => YoutubeScreen(),
-        // Favorite.path: (ctx) => Favorite(),
-        // AboutUs.path: (ctx) => AboutUs(),
-        // CookingTips.path: (ctx) => CookingTips(),
-        // Cooked.path: (ctx) => Cooked(),
+        HomeScreen.path: (ctx) => const HomeScreen(),
+        DetailScreen.path: (ctx) => DetailScreen(),
+        YoutubeScreen.path: (ctx) => const YoutubeScreen(),
+        Favorite.path: (ctx) => const Favorite(),
+        AboutUs.path: (ctx) => const AboutUs(),
+        CookingTips.path: (ctx) => const CookingTips(),
+        Cooked.path: (ctx) => const Cooked(),
       },
     );
   }
