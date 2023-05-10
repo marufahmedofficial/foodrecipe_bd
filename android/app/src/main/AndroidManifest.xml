@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.techrz.it.foodrecipe_bd">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="Food Recipe BD"
         android:name="${applicationName}"

@@ -18,7 +18,7 @@ class YoutubeScreenState extends State<YoutubeScreen> {
     super.initState();
     controller = WebViewController()
       ..loadRequest(
-        Uri.parse('https://youtube.com/@MarufAhmedOfficialM'),
+        Uri.parse('https://flutter.dev'),
 
 
       );
