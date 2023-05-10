@@ -1,6 +1,7 @@
-import 'package:foodrecipe/db/db_helper.dart';
-import 'package:foodrecipe/model/recipe_model.dart';
 import 'package:flutter/material.dart';
+
+import '../db/db_helper.dart';
+import '../model/recipe_model.dart';
 
 class Cooked extends StatefulWidget {
   static const String path = "Cooked";
@@ -31,7 +32,7 @@ class _CookedState extends State<Cooked> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cooked"),
+        title: const Text("Cooked"),
         backgroundColor: Colors.red,
       ),
       body: Container(
@@ -41,10 +42,10 @@ class _CookedState extends State<Cooked> {
           builder: (BuildContext context,
               AsyncSnapshot<List<RecipeModel>> snapshot) {
             if (!snapshot.hasData) {
-              return Text("Loading......");
+              return const Text("Loading......");
             }
             return isLoading
-                ? CircularProgressIndicator()
+                ? const CircularProgressIndicator()
                 : ListView(
                     children: snapshot.data!.map((recipe) {
                       return Card(
@@ -57,7 +58,7 @@ class _CookedState extends State<Cooked> {
                               height: 60,
                               fit: BoxFit.cover,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Expanded(
@@ -68,12 +69,12 @@ class _CookedState extends State<Cooked> {
                                   Text(
                                     "${recipe.title}",
                                     overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 8,
                                   ),
                                   Row(
@@ -82,17 +83,17 @@ class _CookedState extends State<Cooked> {
                                     children: [
                                       Text(
                                         "Ingradients:  ${countIngradients(recipe.ingredients)}",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 8,
                                       ),
                                       Text(
                                         "Directions:  ${countDirections(recipe.directions)}",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,
                                         ),
@@ -112,7 +113,7 @@ class _CookedState extends State<Cooked> {
                                   isLoading = false;
                                 });
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.delete,
                                 color: Colors.red,
                               ),

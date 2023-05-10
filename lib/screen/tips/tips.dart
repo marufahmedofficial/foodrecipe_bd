@@ -18,7 +18,7 @@ class CookingTips extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Text(
                   "Cooking Tips That'll Change Every Home Cook's Life",
                   style: TextStyle(
